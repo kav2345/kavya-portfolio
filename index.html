@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S Kavya Reddy | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#fcf8f7;
+  --white:#fff;
+  --text:#383448;
+  --muted:#777386;
+  --purple:#8976b7;
+  --dark:#705d9c;
+  --lav:#eee8fa;
+  --pink:#fae8ed;
+  --mint:#e6f2e9;
+  --peach:#f9ecdf;
+  --border:#eee6ed;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+a {text-decoration:none;color:inherit;}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(252,248,247,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav {
+  max-width:1150px;
+  margin:auto;
+  padding:17px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo {
+  font:700 25px 'Playfair Display',serif;
+  color:var(--purple);
+}
+
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:19px;
+}
+
+nav a {
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600;
+}
+
+nav a:hover {color:var(--purple);}
+
+section {
+  max-width:1150px;
+  margin:auto;
+  padding:80px 25px;
+}
+
+.heading {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.heading h2 {
+  font:700 38px 'Playfair Display',serif;
+  margin-bottom:8px;
+}
+
+.heading h2 span {color:var(--purple);}
+
+.heading p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* HERO */
+
+.hero {
+  min-height:680px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:45px;
+}
+
+.eyebrow {
+  display:inline-block;
+  background:var(--lav);
+  color:var(--dark);
+  padding:8px 17px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.hero h1 {
+  font:700 clamp(42px,5vw,65px)/1.2 'Playfair Display',serif;
+  margin:24px 0 15px;
+}
+
+.hero h1 span {color:var(--purple);}
+
+.hero h3 {
+  color:#82758f;
+  font-size:18px;
+  margin-bottom:18px;
+}
+
+.hero p {
+  color:var(--muted);
+  font-size:15px;
+  max-width:570px;
+}
+
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:27px;
+}
+
+.btn {
+  display:inline-block;
+  background:var(--purple);
+  color:white;
+  padding:12px 23px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:700;
+  border:1px solid var(--purple);
+  transition:.3s;
+}
+
+.btn:hover {
+  background:var(--dark);
+  transform:translateY(-4px);
+}
+
+.btn-outline {
+  color:var(--purple);
+  background:transparent;
+}
+
+.btn-outline:hover {color:white;}
+
+/* PHOTO */
+
+.photo-area {
+  display:flex;
+  justify-content:center;
+  position:relative;
+  padding:20px;
+}
+
+.photo-frame {
+  width:335px;
+  height:440px;
+  padding:11px;
+  border-radius:180px 180px 35px 35px;
+  background:linear-gradient(145deg,#e8ddf8,#f9e1e9,#e5f2e9);
+  box-shadow:0 20px 50px rgba(80,60,100,.14);
+  transform:rotate(2deg);
+  transition:.3s;
+}
+
+.photo-frame:hover {transform:rotate(0deg);}
+
+.photo-frame img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 55%;
+  border-radius:170px 170px 27px 27px;
+}
+
+.photo-note {
+  position:absolute;
+  bottom:30px;
+  left:0;
+  background:white;
+  padding:12px 18px;
+  border-radius:14px;
+  box-shadow:0 8px 25px #00000012;
+  font-size:13px;
+  font-weight:700;
+  color:var(--dark);
+}
+
+/* CARDS */
+
+.card {
+  background:white;
+  padding:27px;
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow:0 8px 25px rgba(75,62,92,.04);
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(75,62,92,.09);
+}
+
+/* ABOUT */
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:22px;
+}
+
+.about-main p {
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:16px;
+}
+
+.about-main h3,.about-side h3 {
+  color:var(--purple);
+  margin-bottom:15px;
+}
+
+.about-side {
+  background:linear-gradient(145deg,var(--lav),var(--pink));
+}
+
+.about-side p {
+  font-size:14px;
+  color:#716b7c;
+  margin-bottom:17px;
+}
+
+.about-tag {
+  display:inline-block;
+  background:white;
+  color:var(--dark);
+  padding:7px 12px;
+  border-radius:20px;
+  margin:4px;
+  font-size:12px;
+  font-weight:600;
+}
+
+/* SKILLS */
+
+.skill-category {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:26px;
+  margin-bottom:20px;
+}
+
+.skill-title {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin-bottom:20px;
+}
+
+.skill-icon {
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:var(--lav);
+  font-size:22px;
+}
+
+.skill-title h3 {font-size:18px;}
+
+.pills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+}
+
+.pill {
+  padding:10px 16px;
+  border-radius:13px;
+  font-size:13px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.pill:hover {transform:translateY(-4px);}
+.purple {background:var(--lav);color:#705d9c;}
+.pink {background:var(--pink);color:#96657a;}
+.green {background:var(--mint);color:#537b60;}
+.peach {background:var(--peach);color:#956c4d;}
+
+/* EXPERIENCE */
+
+.timeline {
+  display:grid;
+  gap:22px;
+}
+
+.experience-card {
+  border-left:5px solid #ad99d0;
+}
+
+.experience-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.experience-head h3 {
+  color:var(--purple);
+  font-size:22px;
+}
+
+.experience-head p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.date {
+  background:var(--lav);
+  color:var(--dark);
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.experience-card ul {
+  list-style:none;
+  margin-top:14px;
+}
+
+.experience-card li {
+  position:relative;
+  padding:9px 0 9px 25px;
+  color:var(--muted);
+  font-size:14px;
+  border-bottom:1px solid #f2edf1;
+}
+
+.experience-card li:last-child {border:0;}
+
+.experience-card li::before {
+  content:"✦";
+  position:absolute;
+  left:0;
+  color:var(--purple);
+}
+
+/* PROJECTS */
+
+.project-grid,.education-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.project-no {
+  color:#c9b9e2;
+  font:700 30px 'Playfair Display',serif;
+}
+
+.card h3 {
+  color:var(--purple);
+  font-size:19px;
+  margin:10px 0;
+}
+
+.card p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.tags {margin-top:16px;}
+
+.tag {
+  display:inline-block;
+  background:var(--lav);
+  color:var(--dark);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:700;
+  margin:3px;
+}
+
+/* EDUCATION */
+
+.education-card:nth-child(2) {border-top:4px solid #e8c5d2;}
+.education-card:nth-child(3) {border-top:4px solid #b9d8c1;}
+.education-card:nth-child(4) {border-top:4px solid #e9d1b5;}
+.education-card:nth-child(1) {border-top:4px solid #c8b6e4;}
+
+.education-card .year {
+  color:var(--purple);
+  font-weight:700;
+  font-size:12px;
+}
+
+/* LANGUAGES */
+
+.language-box {
+  text-align:center;
+  padding:30px;
+  border-radius:22px;
+  background:linear-gradient(120deg,var(--lav),var(--pink),var(--mint));
+}
+
+.language-box h3 {
+  font:700 25px 'Playfair Display',serif;
+  margin-bottom:17px;
+}
+
+.language {
+  display:inline-block;
+  background:white;
+  padding:10px 22px;
+  border-radius:25px;
+  margin:5px;
+  color:var(--dark);
+  font-size:13px;
+  font-weight:700;
+}
+
+/* CONTACT */
+
+.contact-box {
+  text-align:center;
+  background:linear-gradient(135deg,var(--lav),var(--pink),var(--mint));
+  border-radius:28px;
+  padding:50px 25px;
+}
+
+.contact-box h2 {
+  font:700 38px 'Playfair Display',serif;
+  margin-bottom:12px;
+}
+
+.contact-box p {
+  color:#716b7c;
+  font-size:14px;
+}
+
+.contact-links {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:25px;
+}
+
+.contact-links a {
+  background:white;
+  color:var(--dark);
+  padding:12px 19px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s;
+}
+
+.contact-links a:hover {
+  transform:translateY(-4px);
+}
+
+footer {
+  text-align:center;
+  padding:25px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+  .nav {flex-direction:column;}
+  nav {justify-content:center;gap:13px;}
+  .hero {
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:55px;
+  }
+  .hero p {margin:auto;}
+  .actions {justify-content:center;}
+  .about-grid {grid-template-columns:1fr;}
+}
+
+@media(max-width:550px) {
+  section {padding:60px 18px;}
+  .project-grid,.education-grid {grid-template-columns:1fr;}
+  .photo-frame {width:275px;height:370px;}
+  .hero h1 {font-size:43px;}
+  .heading h2 {font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="logo">Kavya Reddy.</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+  <div>
+    <span class="eyebrow">WELCOME TO MY PORTFOLIO ✨</span>
+
+    <h1>Hello, I'm <span>Kavya Reddy</span></h1>
+
+    <h3>Operations Coordination | Data Science | Technology</h3>
+
+    <p>
+      A motivated and detail-oriented professional with experience
+      in operations coordination, client communication, documentation
+      and project-based freelance work. With a Computer Science and
+      Data Science background, I bring together technical knowledge,
+      organizational abilities and a strong willingness to learn.
+    </p>
+
+    <div class="actions">
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="photo-area">
+    <div class="photo-frame">
+      <img src="profile.jpg" alt="S Kavya Reddy">
+    </div>
+    <div class="photo-note">♡ Learning • Growing • Creating</div>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="heading">
+    <h2>About <span>Me</span></h2>
+    <p>My background, experience and professional interests</p>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="card about-main">
+
+      <h3>My Journey</h3>
+
+      <p>
+        Hello! I'm S Kavya Reddy, a Computer Science graduate
+        specializing in Data Science and currently pursuing
+        M.Tech in Artificial Intelligence. My academic journey
+        has developed my interest in technology, programming,
+        logical thinking and practical problem-solving.
+      </p>
+
+      <p>
+        I have professional experience as a Coordinator at
+        Albireo Tech System, where I worked with international
+        clients and internal teams. My responsibilities included
+        coordinating meetings, managing schedules, handling
+        follow-ups, maintaining communication records and
+        supporting daily operations. This experience strengthened
+        my communication, organization and coordination skills.
+      </p>
+
+      <p>
+        I have also worked as a freelance project contributor
+        on short-term projects associated with FirstClub.
+        Each assignment generally lasted around one week and
+        involved data operations and designing-related tasks.
+        This gave me practical exposure to independent project
+        work, task management and completing assigned work
+        within deadlines.
+      </p>
+
+      <p>
+        Along with my professional experience, I have basic
+        programming knowledge in Java, Python and SQL.
+        I enjoy exploring new technologies, improving my
+        computer skills and learning through practical projects.
+      </p>
+
+      <p>
+        I am an adaptable and responsible individual who values
+        teamwork, continuous learning and effective communication.
+        My goal is to contribute positively to an organization
+        while continuing to grow both technically and professionally.
+      </p>
+
+    </div>
+
+    <div class="card about-side">
+
+      <h3>What Defines Me</h3>
+
+      <p><b>💻 Technical Curiosity</b><br>
+      Interested in programming, data and emerging technologies.</p>
+
+      <p><b>🤝 Communication</b><br>
+      Comfortable coordinating with clients and teams.</p>
+
+      <p><b>📋 Organization</b><br>
+      Interested in documentation, scheduling and task management.</p>
+
+      <p><b>🌱 Growth Mindset</b><br>
+      Always willing to learn and adapt to new challenges.</p>
+
+      <div>
+        <span class="about-tag">Teamwork</span>
+        <span class="about-tag">Adaptability</span>
+        <span class="about-tag">Problem Solving</span>
+        <span class="about-tag">Learning</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+  <div class="heading">
+    <h2>My <span>Skills</span></h2>
+    <p>Technical abilities and professional strengths</p>
+  </div>
+
+  <div class="skill-category">
+    <div class="skill-title">
+      <div class="skill-icon">💻</div>
+      <h3>Programming Skills</h3>
+    </div>
+    <div class="pills">
+      <span class="pill purple">Java – Basic</span>
+      <span class="pill pink">Python – Basic</span>
+      <span class="pill green">SQL – Basic</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <div class="skill-title">
+      <div class="skill-icon">🖥️</div>
+      <h3>Computer & AI Tools</h3>
+    </div>
+    <div class="pills">
+      <span class="pill purple">MS Word</span>
+      <span class="pill pink">MS Excel</span>
+      <span class="pill green">PowerPoint</span>
+      <span class="pill peach">Google Workspace</span>
+      <span class="pill purple">ChatGPT</span>
+      <span class="pill pink">Prompt Engineering</span>
+      <span class="pill green">AI-Assisted Productivity</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <div class="skill-title">
+      <div class="skill-icon">📋</div>
+      <h3>Administrative & Operations</h3>
+    </div>
+    <div class="pills">
+      <span class="pill peach">Documentation</span>
+      <span class="pill purple">Data Entry</span>
+      <span class="pill pink">Scheduling</span>
+      <span class="pill green">Coordination</span>
+      <span class="pill peach">Record Maintenance</span>
+      <span class="pill purple">Follow-up Management</span>
+      <span class="pill pink">Workflow Support</span>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <div class="skill-title">
+      <div class="skill-icon">🌷</div>
+      <h3>Professional Strengths</h3>
+    </div>
+    <div class="pills">
+      <span class="pill purple">Communication</span>
+      <span class="pill pink">Time Management</span>
+      <span class="pill green">Problem Solving</span>
+      <span class="pill peach">Team Coordination</span>
+      <span class="pill purple">Client Handling</span>
+      <span class="pill pink">Adaptability</span>
+      <span class="pill green">Stakeholder Management</span>
+    </div>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <h3>⌨ Typing Speed</h3>
+    <p style="font-size:28px;color:#8976b7;font-weight:700;">40 WPM</p>
+    <p>Words per minute</p>
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+  <div class="heading">
+    <h2>Professional <span>Experience</span></h2>
+    <p>My professional and freelance project experience</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="card experience-card">
+
+      <div class="experience-head">
+        <div>
+          <h3>Coordinator</h3>
+          <p><b>Albireo Tech System</b></p>
+        </div>
+        <span class="date">August 2025 – March 2026</span>
+      </div>
+
+      <ul>
+        <li>
+          Served as a primary point of contact between
+          international clients and internal teams to ensure
+          effective communication and smooth coordination.
+        </li>
+        <li>
+          Coordinated client meetings, scheduled appointments,
+          managed follow-ups and maintained communication records.
+        </li>
+        <li>
+          Monitored daily task progress, tracked deliverables
+          and supported timely completion of assigned activities.
+        </li>
+        <li>
+          Prepared status updates, maintained documentation
+          and assisted team leads with administrative activities.
+        </li>
+        <li>
+          Facilitated communication between stakeholders
+          to support smooth workflow and task management.
+        </li>
+      </ul>
+
+      <div class="tags">
+        <span class="tag">Client Communication</span>
+        <span class="tag">Coordination</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Scheduling</span>
+        <span class="tag">Operations</span>
+      </div>
+
+    </div>
+
+    <div class="card experience-card">
+
+      <div class="experience-head">
+        <div>
+          <h3>Freelance Project Contributor</h3>
+          <p><b>FirstClub</b></p>
+        </div>
+        <span class="date">Short-term projects</span>
+      </div>
+
+      <p style="color:#777386;font-size:14px;">
+        Worked on short-term freelance assignments associated
+        with FirstClub, with individual projects generally
+        lasting around one week.
+      </p>
+
+      <ul>
+        <li>
+          Contributed to assigned data operations-related tasks
+          as part of project-based freelance work.
+        </li>
+        <li>
+          Worked on designing-related assignments based on
+          individual project requirements.
+        </li>
+        <li>
+          Managed assigned tasks independently and focused
+          on completing project work within the given timeline.
+        </li>
+        <li>
+          Gained practical exposure to short-term project
+          execution, attention to detail and task management.
+        </li>
+      </ul>
+
+      <div class="tags">
+        <span class="tag">Freelance Projects</span>
+        <span class="tag">Data Operations</span>
+        <span class="tag">Designing</span>
+        <span class="tag">Task Management</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="heading">
+    <h2>My <span>Projects</span></h2>
+    <p>Practical work and programming fundamentals</p>
+  </div>
+
+  <div class="project-grid">
+
+    <div class="card">
+      <div class="project-no">01</div>
+      <h3>Hospital Management System</h3>
+      <p><b>Community Service Project</b></p>
+      <p>
+        Designed and implemented a system to manage patient
+        records, appointment scheduling and workflow coordination,
+        helping reduce manual effort and improve data accuracy.
+      </p>
+      <div class="tags">
+        <span class="tag">Community Project</span>
+        <span class="tag">Workflow</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-no">02</div>
+      <h3>Calculator Application</h3>
+      <p>
+        Developed a basic Java application to perform arithmetic
+        operations such as addition, subtraction, multiplication
+        and division.
+      </p>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Programming Basics</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-no">03</div>
+      <h3>To-Do List Application</h3>
+      <p>
+        Created a simple Java application to add, view and
+        manage daily tasks using basic programming concepts.
+      </p>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Task Management</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+  <div class="heading">
+    <h2>My <span>Education</span></h2>
+    <p>Academic background and qualifications</p>
+  </div>
+
+  <div class="education-grid">
+
+    <div class="card education-card">
+      <p class="year">2026 – EXPECTED 2028</p>
+      <h3>M.Tech – Artificial Intelligence</h3>
+      <p>Mother Theresa Institute of Engineering & Technology</p>
+      <div class="tags">
+        <span class="tag">Currently Pursuing</span>
+      </div>
+    </div>
+
+    <div class="card education-card">
+      <p class="year">2022 – 2026</p>
+      <h3>B.Tech – CSE (Data Science)</h3>
+      <p>Mother Theresa Institute of Engineering & Technology, Palamaner</p>
+      <div class="tags">
+        <span class="tag">80%</span>
+      </div>
+    </div>
+
+    <div class="card education-card">
+      <p class="year">2020 – 2022</p>
+      <h3>Intermediate – MPC</h3>
+      <p>Narayana Junior College, Tirupati</p>
+      <div class="tags">
+        <span class="tag">91%</span>
+      </div>
+    </div>
+
+    <div class="card education-card">
+      <p class="year">2020</p>
+      <h3>SSC – Class X</h3>
+      <p>Vignan Jyoti EM School, Punganur</p>
+      <div class="tags">
+        <span class="tag">99%</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LANGUAGES -->
+
+<section id="languages">
+
+  <div class="language-box">
+    <h3>Languages Known</h3>
+    <span class="language">English</span>
+    <span class="language">Telugu</span>
+    <span class="language">Kannada</span>
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="contact-box">
+
+    <h2>Let's Connect!</h2>
+
+    <p>
+      Thank you for visiting my portfolio.
+      I'm open to professional opportunities,
+      collaboration and continuous learning.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:kavya3sreddy@gmail.com">
+        ✉ Email Me
+      </a>
+
+      <a href="tel:+919182937708">
+        ☎ Call Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/s-kavyareddy23"
+         target="_blank" rel="noopener">
+        in LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 S Kavya Reddy | Personal Portfolio</p>
+  <p>Designed with HTML & CSS</p>
+</footer>
+
+</body>
+</html>
